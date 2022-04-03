@@ -11,9 +11,10 @@ app.get("/greeting/:name", (req,res)=> {
     res.send("whats up" + " " + (req.params.name))
 })
 
-
-
-
+app.get("/tip/:total/:tipPercentage",(req,res)=> {
+    res.send(`your tip is ${(parseInt(req.params.total) * parseInt(req.params.tipPercentage) /100)}`)
+})
+    
 
 
 

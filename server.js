@@ -39,7 +39,7 @@ const mag = [
 
 app.get("/magic/:question", (req,res)=> {
     for (i = 0; i, i < mag.length; i++) {
-    res.send(`<h1>${req.params.question}</h1> </br><h2>${mag[i]}<h2>`)
+    res.send(`<h1>${req.params.question}</h1> </br><h2>${mag[Math.floor(Math.random() * mag.length)]}<h2>`)
 }});
 
 
